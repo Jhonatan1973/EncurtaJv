@@ -67,4 +67,9 @@ public class Link {
     public void setUrlCriadaEm(LocalDateTime urlCriadaEm) {
         this.urlCriadaEm = urlCriadaEm;
     }
+
+    public void setUrlOriginal(String urlOriginal) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'setUrlOriginal'");
+    }
 }
