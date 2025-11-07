@@ -1,39 +1,37 @@
 package dev.jhon.EncurtaJv.Links;
 
 import jakarta.persistence.*;
-
 import java.time.LocalDateTime;
 
 @Entity
 @Table(name = "links_simulator")
 public class Link {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private String urlLong;
+    private String urlOriginal;
     private String urlEncurtada;
     private String urlQrCode;
     private LocalDateTime urlCriadaEm;
 
-    public Link(Long id, String urlLong, String urlEncurtada, String urlQrCode, LocalDateTime urlCriadaEm) {
+    public Link() {}
+
+    public Link(Long id, String urlOriginal, String urlEncurtada, String urlQrCode, LocalDateTime urlCriadaEm) {
         this.id = id;
-        this.urlLong = urlLong;
+        this.urlOriginal = urlOriginal;
         this.urlEncurtada = urlEncurtada;
         this.urlQrCode = urlQrCode;
         this.urlCriadaEm = urlCriadaEm;
-    }
-
-    public Link(Long id) {
-        this.id = id;
     }
 
     public Long getId() {
         return id;
     }
 
-    public String getUrlLong() {
-        return urlLong;
+    public String getUrlOriginal() {
+        return urlOriginal;
     }
 
     public String getUrlEncurtada() {
@@ -52,8 +50,8 @@ public class Link {
         this.id = id;
     }
 
-    public void setUrlLong(String urlLong) {
-        this.urlLong = urlLong;
+    public void setUrlOriginal(String urlOriginal) {
+        this.urlOriginal = urlOriginal;
     }
 
     public void setUrlEncurtada(String urlEncurtada) {
@@ -66,10 +64,5 @@ public class Link {
 
     public void setUrlCriadaEm(LocalDateTime urlCriadaEm) {
         this.urlCriadaEm = urlCriadaEm;
-    }
-
-    public void setUrlOriginal(String urlOriginal) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'setUrlOriginal'");
     }
 }
